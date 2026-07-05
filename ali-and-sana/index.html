@@ -607,22 +607,25 @@
                 }, 500);
             }
 
-            if (googleSheetUrl !== 'https://docs.google.com/spreadsheets/d/1fovFlXFhsVOb4B-YobVqionycnj1zayeyR2am4fCwVc/edit?gid=514768790#gid=514768790' && googleSheetUrl !== '') {
-                // Submit to Google Sheets (using no-cors mode to bypass CORS policy on direct POSTs)
+            if (googleSheetUrl && googleSheetUrl.includes('script.google.com')) {
+                // Submit to Google Sheets using url-encoded form data (bulletproof for Google Web Apps in no-cors mode)
+                const params = new URLSearchParams();
+                params.append('name', name);
+                params.append('attendance', status === 'accepts' ? 'Accepts with Joy' : 'Declines with Regret');
+                params.append('guests', status === 'accepts' ? guests : '0');
+                params.append('notes', notes);
+
                 fetch(googleSheetUrl, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
+                    body: params
                 })
                     .then(() => {
                         showSuccess();
                     })
                     .catch(err => {
                         console.error("Error submitting to Google Sheet:", err);
-                        // Fallback to show success screen so the user doesn't see a broken form
+                        // Fallback so the user always sees a success response
                         showSuccess();
                     });
             } else {
