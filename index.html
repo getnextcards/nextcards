@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextCards | Premium Digital Invitations & Pages</title>
+    
+    <!-- Comprehensive SEO Optimization -->
+    <meta name="description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, birthday cards, and professional booking pages. Elevate your digital presence today.">
+    <meta name="keywords" content="digital wedding invitations, digital business cards, professional booking pages, online invitations, custom digital invites, NextCards">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://nextcards.github.io/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextcards.github.io/">
+    <meta property="og:title" content="NextCards | Premium Digital Invitations & Pages">
+    <meta property="og:description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, and professional booking pages. Elevate your digital presence today.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nextcards.github.io/">
+    <meta property="twitter:title" content="NextCards | Premium Digital Invitations & Pages">
+    <meta property="twitter:description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, and professional booking pages. Elevate your digital presence today.">
+
+    <!-- JSON-LD Structured Data for Organization/Agency -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "NextCards Agency",
+      "url": "https://nextcards.github.io/",
+      "description": "Premium digital invitations, digital business cards, and professional booking pages.",
+      "sameAs": [
+        "https://wa.me/1234567890"
+      ]
+    }
+    </script>
+
+    <!-- Fonts: Outfit for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0f19',
+                        darkSurface: '#151b2b',
+                        neonPurple: '#d946ef',
+                        neonBlue: '#0ea5e9',
+                        neonPink: '#f43f5e'
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-hover:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d946ef;
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-neonPurple selection:text-white">
+
+    <!-- Glowing Background Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-neonPurple rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-neonBlue rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-neonPink rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b-0 border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-display font-bold text-white tracking-tight">Next<span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonPurple">Cards</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition">Services</a>
+                <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-white transition">Reviews</a>
+            </div>
+            <div>
+                <a href="#order" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all duration-300 shadow-[0_0_15px_rgba(217,70,239,0.3)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)]">Order Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative z-10 pt-24 pb-12 sm:pt-32">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 lg:px-8 py-20 text-center flex flex-col items-center">
+            <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-fade-in-up">
+                <span class="flex w-2 h-2 rounded-full bg-neonBlue mr-2 animate-pulse"></span>
+                <span class="text-xs font-medium text-slate-300 tracking-wider uppercase">Premium Digital Pages</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold text-white tracking-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                Your Digital Presence,<br>
+                <span class="bg-gradient-to-r from-neonBlue via-neonPurple to-neonPink text-gradient">Elevated.</span>
+            </h1>
+            
+            <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                From fully customized, interactive wedding invitations to professional booking pages for doctors and consultants. We build digital experiences that leave a lasting impression.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.3s;">
+                <a href="#order" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-neonPurple to-neonBlue shadow-[0_0_20px_rgba(217,70,239,0.4)] hover:shadow-[0_0_30px_rgba(217,70,239,0.6)] transform hover:-translate-y-1 transition-all duration-300">
+                    Start Your Project
+                </a>
+                <a href="#services" class="px-8 py-4 rounded-full text-base font-semibold text-white glass glass-hover transition-all duration-300">
+                    Explore Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">What We Craft For You</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">No templates, no limits. Every page is tailored to your unique identity, event, or profession.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Wedding Card -->
+                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neonPink/20 to-neonPurple/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-2xl">💍</span>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Wedding & Event Invites</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Wow your guests with a stunning, interactive digital invitation. Features include RSVP forms, countdown timers, photo galleries, and embedded map locations.</p>
+                        </div>
+                        <a href="./demo/index.html" target="_blank" class="inline-flex items-center text-neonPink text-sm font-semibold hover:text-white transition-colors duration-300">
+                            View Live Demo 
+                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Business Card -->
+                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-2xl">💼</span>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Digital Business Cards</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Ditch paper cards. Get a sleek digital portfolio containing your links, contacts, resume, and bio. Easily shared via a single link or QR code.</p>
+                        </div>
+                        <a href="#order" class="inline-flex items-center text-neonBlue text-sm font-semibold hover:text-white transition-colors duration-300">
+                            Order Yours 
+                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Booking Pages -->
+                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-2xl">🩺</span>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Professional Booking Pages</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Perfect for Doctors, Consultants, and Salons. A branded landing page where your clients can view your services and easily send appointment requests.</p>
+                        </div>
+                        <a href="#order" class="inline-flex items-center text-emerald-400 text-sm font-semibold hover:text-white transition-colors duration-300">
+                            Get Setup Today
+                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Custom Anything -->
+                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-2xl">✨</span>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Custom Websites</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Have an idea? Birthday parties, baby showers, personal blogs, or product launches. We can build a custom, eye-catching page for anything you desire.</p>
+                        </div>
+                        <a href="#order" class="inline-flex items-center text-amber-400 text-sm font-semibold hover:text-white transition-colors duration-300">
+                            Discuss Idea
+                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section (Fetched dynamically) -->
+        <section id="reviews" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Loved by our Clients</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Don't just take our word for it. Read what people are saying about NextCards.</p>
+                </div>
+                
+                <!-- Loading State -->
+                <div id="reviews-loader" class="flex justify-center items-center py-12">
+                    <svg class="animate-spin h-8 w-8 text-neonPurple" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </div>
+
+                <!-- Reviews Grid container -->
+                <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                    <!-- Cards will be injected here via JS -->
+                </div>
+                
+                <div id="no-reviews" class="hidden text-center text-slate-500 py-12 italic">
+                    Be the first to leave a review below!
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section: Order & Review -->
+        <section id="order" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Order Form -->
+                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-neonBlue rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                        
+                        <h2 class="text-3xl font-display font-bold text-white mb-2">Start Your Project</h2>
+                        <p class="text-slate-400 text-sm mb-8">Fill out the form below and we will get back to you with a quote within 24 hours.</p>
+
+                        <div id="order-success" class="hidden bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Order received! We'll contact you shortly.
+                        </div>
+
+                        <form id="orderForm" class="space-y-5 relative z-10" onsubmit="submitForm(event, 'order')">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">WhatsApp / Phone</label>
+                                <input type="text" name="phone" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="+1 234 567 8900">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Service Needed</label>
+                                <select name="serviceType" class="w-full px-4 py-3 bg-darkSurface border border-white/10 focus:border-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm">
+                                    <option value="Wedding Invite">Wedding / Event Invite</option>
+                                    <option value="Business Card">Digital Business Card</option>
+                                    <option value="Booking Page">Professional Booking Page</option>
+                                    <option value="Custom Project">Other Custom Project</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Project Details</label>
+                                <textarea name="message" rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="Tell us a bit about what you need..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-neonBlue to-neonPurple hover:opacity-90 text-white rounded-xl shadow-[0_0_15px_rgba(217,70,239,0.3)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)] transition-all duration-300 font-semibold text-sm tracking-widest uppercase flex justify-center items-center">
+                                <span>Submit Request</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Leave a Review Form -->
+                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-center">
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-neonPurple rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                        
+                        <h2 class="text-3xl font-display font-bold text-white mb-2">Leave a Review</h2>
+                        <p class="text-slate-400 text-sm mb-8">Already a client? We'd love to hear about your experience.</p>
+
+                        <div id="review-success" class="hidden bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Review submitted! It will appear after approval.
+                        </div>
+
+                        <form id="reviewForm" class="space-y-5 relative z-10" onsubmit="submitForm(event, 'review')">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonPurple focus:ring-1 focus:ring-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Rating (out of 5)</label>
+                                <select name="rating" class="w-full px-4 py-3 bg-darkSurface border border-white/10 focus:border-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm">
+                                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
+                                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Great</option>
+                                    <option value="⭐⭐⭐">⭐⭐⭐ Good</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Your Review</label>
+                                <textarea name="reviewText" required rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonPurple focus:ring-1 focus:ring-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="How did you like your NextCards page?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl transition-all duration-300 font-semibold text-sm tracking-widest uppercase flex justify-center items-center">
+                                <span>Post Review</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/5 pt-12 pb-8 mt-12 relative z-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
+                <span class="text-2xl font-display font-bold text-white tracking-tight mb-4 opacity-50 grayscale">NextCards</span>
+                <p class="text-sm text-slate-500 mb-6">Redefining digital invitations and professional profiles.</p>
+                <p class="text-xs text-slate-600">&copy; 2026 NextCards Agency. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Integration Script -->
+    <script>
+        // The URL provided by the user
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7FNAdpyznBFL19pXjQSlqNVm4CSg494UTyFxg7LVkzyG2IlL1N_muPZsRjXvWa4JAmA/exec';
+
+        // Fetch Reviews on Page Load
+        async function loadReviews() {
+            const grid = document.getElementById('reviews-grid');
+            const loader = document.getElementById('reviews-loader');
+            const noReviews = document.getElementById('no-reviews');
+
+            try {
+                const response = await fetch(SCRIPT_URL);
+                const reviews = await response.json();
+                
+                loader.classList.add('hidden');
+
+                if (!reviews || reviews.length === 0) {
+                    noReviews.classList.remove('hidden');
+                    return;
+                }
+
+                // Populate grid
+                grid.classList.remove('hidden');
+                grid.innerHTML = ''; // clear
+
+                reviews.forEach(review => {
+                    // Create review card
+                    const card = document.createElement('div');
+                    card.className = 'glass p-8 rounded-3xl relative';
+                    
+                    // Add quote icon watermark
+                    const quoteIcon = `<svg class="absolute top-6 right-6 w-10 h-10 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>`;
+                    
+                    card.innerHTML = `
+                        ${quoteIcon}
+                        <div class="mb-4 text-sm">${review.rating}</div>
+                        <p class="text-slate-300 italic mb-6 leading-relaxed relative z-10">"${escapeHTML(review.text)}"</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-neonBlue to-neonPurple flex items-center justify-center text-white font-bold font-display shadow-sm mr-3">
+                                ${review.name.charAt(0).toUpperCase()}
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">${escapeHTML(review.name)}</h4>
+                                <span class="text-slate-500 text-xs">Verified Client</span>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error("Error fetching reviews:", error);
+                loader.classList.add('hidden');
+                noReviews.innerHTML = "Couldn't load reviews at this time.";
+                noReviews.classList.remove('hidden');
+            }
+        }
+
+        // Generic Form Submit Function
+        function submitForm(event, actionType) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg> Sending...`;
+
+            // Prepare Data
+            const formData = new URLSearchParams(new FormData(form));
+            formData.append('action', actionType);
+
+            // POST to Google Sheet Web App
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                // Show success message
+                form.reset();
+                form.classList.add('hidden');
+                document.getElementById(actionType + '-success').classList.remove('hidden');
+            })
+            .catch(error => {
+                console.error("Error submitting form:", error);
+                alert("There was an error. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+        }
+
+        // Helper to prevent XSS in fetched reviews
+        function escapeHTML(str) {
+            if (!str) return '';
+            return str.toString().replace(/[&<>'"]/g, 
+                tag => ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    "'": '&#39;',
+                    '"': '&quot;'
+                }[tag] || tag)
+            );
+        }
+
+        // Load reviews when DOM is ready
+        document.addEventListener('DOMContentLoaded', loadReviews);
+    </script>
+</body>
+</html>
