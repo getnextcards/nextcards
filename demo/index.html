@@ -117,7 +117,26 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #A47B41;
         }
+
+        /* Floating Hearts Animation */
+        @keyframes float-heart {
+            0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+        }
+        .floating-heart {
+            position: absolute;
+            color: rgba(218, 129, 141, 0.4);
+            font-size: 24px;
+            animation: float-heart linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
     </style>
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body
@@ -128,6 +147,14 @@
 
     <!-- Main Wrapper with elegant borders -->
     <div class="min-h-screen flex flex-col justify-between relative">
+
+        <!-- Floating Hearts Background -->
+        <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+            <div class="floating-heart" style="left: 10%; animation-duration: 15s; animation-delay: 0s;">♥</div>
+            <div class="floating-heart" style="left: 35%; animation-duration: 12s; animation-delay: 5s;">♥</div>
+            <div class="floating-heart" style="left: 60%; animation-duration: 18s; animation-delay: 2s;">♥</div>
+            <div class="floating-heart" style="left: 85%; animation-duration: 14s; animation-delay: 7s;">♥</div>
+        </div>
 
         <!-- Background floral elements overlay (left & right) -->
         <div class="absolute inset-0 bg-cover bg-center opacity-[0.08] pointer-events-none z-0"
@@ -644,6 +671,15 @@
             function showSuccess() {
                 if (status === 'accepts') {
                     successMsg.innerText = `Thank you, ${name}! Your response has been received. We are overjoyed to celebrate our special day with you and your ${guests > 1 ? (guests - 1) + ' guest(s)' : 'party'}!`;
+                    // Fire confetti on RSVP success!
+                    if(typeof confetti === 'function') {
+                        confetti({
+                            particleCount: 150,
+                            spread: 80,
+                            origin: { y: 0.6 },
+                            colors: ['#A47B41', '#DA818D', '#FAF0F0']
+                        });
+                    }
                 } else {
                     successMsg.innerText = `Thank you, ${name}. Your response has been received. We are saddened that you cannot make it, but we appreciate your warm thoughts and wishes!`;
                 }
@@ -699,32 +735,25 @@
             formContainer.classList.add('opacity-100');
         }
 
-        // Music Player Logic
-        const bgMusic = document.getElementById('bg-music');
-        const musicBtn = document.getElementById('music-btn');
-        const playIcon = document.getElementById('play-icon');
-        const pauseIcon = document.getElementById('pause-icon');
-
-        let isPlaying = false;
-
-        musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                playIcon.classList.remove('hidden');
-                pauseIcon.classList.add('hidden');
-            } else {
-                bgMusic.play();
-                playIcon.classList.add('hidden');
-                pauseIcon.classList.remove('hidden');
-            }
-            isPlaying = !isPlaying;
+        // Fire a soft confetti when page loads (Party popper)
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if(typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.3 },
+                        colors: ['#A47B41', '#DA818D', '#FAF0F0'],
+                        disableForReducedMotion: true
+                    });
+                }
+            }, 1000);
         });
     </script>
 
     <!-- Background Audio -->
     <audio id="bg-music" loop>
-        <!-- Placeholder royalty-free romantic track -->
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=romantic-piano-11440.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Floating Music Player Button -->
@@ -741,6 +770,33 @@
             <span class="text-xs font-medium leading-none mt-1">Contact NextCards</span>
         </div>
     </a>
+
+    <script>
+        // Music Player Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const bgMusic = document.getElementById('bg-music');
+            const musicBtn = document.getElementById('music-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+
+            let isPlaying = false;
+
+            if (musicBtn && bgMusic) {
+                musicBtn.addEventListener('click', () => {
+                    if (isPlaying) {
+                        bgMusic.pause();
+                        playIcon.classList.remove('hidden');
+                        pauseIcon.classList.add('hidden');
+                    } else {
+                        bgMusic.play();
+                        playIcon.classList.add('hidden');
+                        pauseIcon.classList.remove('hidden');
+                    }
+                    isPlaying = !isPlaying;
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
