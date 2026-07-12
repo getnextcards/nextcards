@@ -176,6 +176,20 @@
                     </p>
                 </div>
                 <p class="text-sm italic text-slate-500 mt-2">Lahore, Pakistan</p>
+                
+                <!-- Add to Calendar Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ali+%26+Sana+Wedding&dates=20261015T150000Z/20261015T180000Z&details=Join+us+to+celebrate+the+wedding+of+Ali+and+Sana!&location=Lahore,+Pakistan" target="_blank"
+                        class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-weddingGold-200 hover:border-weddingGold-400 text-slate-700 text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-sm hover:shadow-md transition-all duration-300">
+                        <svg class="w-3.5 h-3.5 text-weddingRose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm7 5h5v5h-5z"/></svg>
+                        <span>Google Calendar</span>
+                    </a>
+                    <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AURL:https://example.com%0ADTSTART:20261015T150000Z%0ADTEND:20261015T180000Z%0ASUMMARY:Ali %26 Sana Wedding%0ADESCRIPTION:Join us to celebrate the wedding of Ali and Sana!%0ALOCATION:Lahore, Pakistan%0AEND:VEVENT%0AEND:VCALENDAR" download="wedding.ics"
+                        class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-weddingGold-200 hover:border-weddingGold-400 text-slate-700 text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-sm hover:shadow-md transition-all duration-300">
+                        <svg class="w-3.5 h-3.5 text-weddingRose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <span>Apple Calendar</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Live Countdown Timer -->
@@ -233,6 +247,50 @@
             </a>
         </header>
 
+        <!-- Love Story & Gallery -->
+        <section id="gallery" class="relative z-10 py-20 bg-white border-t border-weddingGold-200/40">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-script text-4xl text-weddingGold-500">Our Memories</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-weddingRose-500 font-semibold mt-2">The Love Story</h2>
+                    <p class="text-slate-500 text-sm mt-3">A glimpse into the beautiful moments that led us to forever.</p>
+                    <div class="flex items-center justify-center space-x-2 mt-4">
+                        <span class="h-[1px] w-6 bg-weddingGold-300"></span>
+                        <span class="text-weddingGold-400 font-serif text-sm">✿</span>
+                        <span class="h-[1px] w-6 bg-weddingGold-300"></span>
+                    </div>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Engagement" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-xl">The Proposal</p>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rings" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Holding Hands" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-xl">Forever</p>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Dress" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-xl">First Met</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Wedding Schedule & details -->
         <section id="events" class="relative z-10 py-20 bg-cream-50 border-y border-weddingGold-200/40">
             <div class="max-w-6xl mx-auto px-4">
@@ -287,11 +345,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="mt-8">
-                            <a href="https://maps.google.com/?q=The+Crystal+Gardens+Johar+Town+Lahore" target="_blank"
-                                class="block w-full py-3 text-center border border-weddingGold-400 text-weddingGold-600 rounded-xl hover:bg-weddingGold-500 hover:text-white hover:border-weddingGold-500 transition-all duration-300 font-medium text-sm">
-                                View on Map
-                            </a>
+                        <div class="mt-6 rounded-xl overflow-hidden border border-weddingGold-200/50">
+                            <iframe src="https://maps.google.com/maps?q=The+Crystal+Gardens+Johar+Town+Lahore&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -337,11 +392,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="mt-8">
-                            <a href="https://maps.google.com/?q=Grand+Palace+Marquee+DHA+Phase+6+Lahore" target="_blank"
-                                class="block w-full py-3.5 text-center bg-weddingGold-500 text-white rounded-xl hover:bg-weddingGold-600 hover:shadow-md transition-all duration-300 font-semibold text-sm">
-                                View on Map
-                            </a>
+                        <div class="mt-6 rounded-xl overflow-hidden border-2 border-weddingGold-300/50">
+                            <iframe src="https://maps.google.com/maps?q=Grand+Palace+Marquee+DHA+Phase+6+Lahore&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -379,11 +431,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="mt-8">
-                            <a href="https://maps.google.com/?q=Royal+Palm+Golf+and+Country+Club+Lahore" target="_blank"
-                                class="block w-full py-3 text-center border border-weddingGold-400 text-weddingGold-600 rounded-xl hover:bg-weddingGold-500 hover:text-white hover:border-weddingGold-500 transition-all duration-300 font-medium text-sm">
-                                View on Map
-                            </a>
+                        <div class="mt-6 rounded-xl overflow-hidden border border-weddingGold-200/50">
+                            <iframe src="https://maps.google.com/maps?q=Royal+Palm+Golf+and+Country+Club+Lahore&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -649,7 +698,49 @@
             formContainer.classList.remove('hidden', 'opacity-0', 'scale-95');
             formContainer.classList.add('opacity-100');
         }
+
+        // Music Player Logic
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            } else {
+                bgMusic.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            }
+            isPlaying = !isPlaying;
+        });
     </script>
+
+    <!-- Background Audio -->
+    <audio id="bg-music" loop>
+        <!-- Placeholder royalty-free romantic track -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Player Button -->
+    <button id="music-btn" class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-white/90 backdrop-blur-sm border border-weddingGold-300 rounded-full shadow-lg flex items-center justify-center text-weddingGold-600 hover:bg-weddingGold-50 transition-all duration-300 focus:outline-none" aria-label="Play Music">
+        <svg id="play-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="pause-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+
+    <!-- Agency CTA Floating Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center space-x-2 bg-slate-900 text-white px-5 py-3 rounded-full shadow-2xl hover:bg-slate-800 transition-all duration-300 group border border-slate-700">
+        <span class="text-lg">✨</span>
+        <div class="flex flex-col text-left">
+            <span class="text-[10px] uppercase tracking-widest text-weddingGold-400 font-semibold leading-none mb-1">Create Your Invite</span>
+            <span class="text-xs font-medium leading-none mt-1">Contact NextCards</span>
+        </div>
+    </a>
 </body>
 
 </html>
