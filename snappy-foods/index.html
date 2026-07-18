@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snappy Foods Dhanote</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- SweetAlert2 for beautiful popups -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar"
+            style="background: var(--primary-gradient); color: black; text-align: center; padding: 5px; font-weight: bold;">
+            Contact / Free Delivery: 0301-7197577
+        </div>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Snappy Foods Logo" onerror="this.style.display='none'">
+                <h1>SNAPPY FOODS</h1>
+            </div>
+            <button class="menu-toggle" onclick="toggleMobileMenu()">&#9776;</button>
+        </div>
+        <nav id="navbar">
+            <a href="#" onclick="openMenuModal()"
+                style="color: var(--primary-color); border: 1px solid var(--primary-color);">📄 View Original Menu</a>
+            <a href="#budget-deals" onclick="toggleMobileMenu()">Budget Deals</a>
+            <a href="#special-deals" onclick="toggleMobileMenu()">Special Deals</a>
+            <a href="#pizzas" onclick="toggleMobileMenu()">Pizzas</a>
+            <a href="#burgers" onclick="toggleMobileMenu()">Burgers</a>
+            <a href="#wraps" onclick="toggleMobileMenu()">Wraps</a>
+            <a href="#starters" onclick="toggleMobileMenu()">Starters</a>
+            <a href="#fries" onclick="toggleMobileMenu()">Fries</a>
+            <a href="#beverages" onclick="toggleMobileMenu()">Beverages</a>
+            <a href="#addons" onclick="toggleMobileMenu()">Addons</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Budget Deals Section -->
+        <section id="budget-deals">
+            <h2>Budget Deals</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">DEAL A</h3>
+                    <p>2 Crunch Burger, 1 Chicken Shawarma, 1 Zinger Shawarma, Fries, 500 ml Cold Drink</p>
+                    <p class="price">Rs. 1199</p>
+                    <button class="order-btn" onclick="addToCart('DEAL A - Budget Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL B</h3>
+                    <p>1 Small Pizza, 1 Shawarma Platter, 1 Litter Cold Drink</p>
+                    <p class="price">Rs. 999</p>
+                    <button class="order-btn" onclick="addToCart('DEAL B - Budget Deal')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Deals Section -->
+        <section id="special-deals">
+            <h2>Special Deals</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 1</h3>
+                    <p>Zinger Burger, Fries, 345ml Cold Drink</p>
+                    <p class="price">Rs. 520</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 1 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 2</h3>
+                    <p>Small Pizza, 345ml Cold Drink</p>
+                    <p class="price">Rs. 599</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 2 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 3</h3>
+                    <p>3 Zinger Burger, Fries, 3 - 345ml Cold Drink</p>
+                    <p class="price">Rs. 1399</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 3 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 4</h3>
+                    <p>Medium Pizza, 10 Pop Short, 500ml Cold Drink</p>
+                    <p class="price">Rs. 1149</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 4 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 5</h3>
+                    <p>Large Pizza, 1 - Letter Cold Drink</p>
+                    <p class="price">Rs. 1399</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 5 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 6</h3>
+                    <p>5 - Zinger Burger, 1 - Family Fries, 1.5 - ml Cold Drink</p>
+                    <p class="price">Rs. 2299</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 6 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 7</h3>
+                    <p>10 - Wings, 10 - Hot Short, 10 - Nuggets, 1 - Letter Cold Drink</p>
+                    <p class="price">Rs. 1450</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 7 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 8</h3>
+                    <p>Large Pizza, 10 - Hot Winges, 1.5 - Letter Cold Drink</p>
+                    <p class="price">Rs. 1999</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 8 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 9</h3>
+                    <p>2 - Large Pizza, 10 - Hot Shots, 1.5 - Litter Cold Drink</p>
+                    <p class="price">Rs. 2999</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 9 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 10</h3>
+                    <p>3 - Large Pizza, 10 - Wings, 2 - Crunch Burger, 1.5 - Letter Cold Drink</p>
+                    <p class="price">Rs. 4999</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 10 - Special Deal')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">DEAL 11</h3>
+                    <p>1 - Large Pizza, 2 - Zinger Burger, 2 - Twister Roll, 10 - Nuggets, 2 - 1Ltr Cold Drink</p>
+                    <p class="price">Rs. 3499</p>
+                    <button class="order-btn" onclick="addToCart('DEAL 11 - Special Deal')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pizzas Section -->
+        <section id="pizzas">
+            <h2>Pizzas</h2>
+
+            <h3 style="margin-top: 1rem;">Traditional Pizzas</h3>
+            <p style="font-size: 0.9em; color: #666;">Sizes: Small (S) Rs. 550 | Medium (M) Rs. 850 | Large (L) Rs. 1350
+            </p>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Tikka Pizza</h3>
+                    <p class="price">From Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Tikka Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Fajita Pizza</h3>
+                    <p class="price">From Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Fajita Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Tandoori Pizza</h3>
+                    <p class="price">From Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Tandoori Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Supreme Pizza</h3>
+                    <p class="price">From Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Supreme Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Chicken Lover</h3>
+                    <p class="price">From Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Chicken Lover Pizza')">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Signature Pizzas</h3>
+            <p style="font-size: 0.9em; color: #666;">Sizes: Medium (M) Rs. 980 | Large (L) Rs. 1450</p>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Snap Special Pizza</h3>
+                    <p class="price">From Rs. 980</p>
+                    <button class="order-btn" onclick="addToCart('Snap Special Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Malai Tikka Pizza</h3>
+                    <p class="price">From Rs. 980</p>
+                    <button class="order-btn" onclick="addToCart('Malai Tikka Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Peri Peri Pizza</h3>
+                    <p class="price">From Rs. 980</p>
+                    <button class="order-btn" onclick="addToCart('Peri Peri Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Behari Pizza</h3>
+                    <p class="price">From Rs. 980</p>
+                    <button class="order-btn" onclick="addToCart('Behari Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Bone Fire Pizza</h3>
+                    <p class="price">From Rs. 980</p>
+                    <button class="order-btn" onclick="addToCart('Bone Fire Pizza')">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Snap Special Pizza (Crusts)</h3>
+            <p style="font-size: 0.9em; color: #666;">Sizes: Small (S) Rs. 1150 | Medium (M) Rs. 1500</p>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Kabab Crust Pizza</h3>
+                    <p class="price">From Rs. 1150</p>
+                    <button class="order-btn" onclick="addToCart('Kabab Crust Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Crown Crust Pizza</h3>
+                    <p class="price">From Rs. 1150</p>
+                    <button class="order-btn" onclick="addToCart('Crown Crust Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Special Lazanian</h3>
+                    <p class="price">From Rs. 1150</p>
+                    <button class="order-btn" onclick="addToCart('Special Lazanian')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Chicken Cheese Crust Pizza</h3>
+                    <p class="price">From Rs. 1150</p>
+                    <button class="order-btn" onclick="addToCart('Chicken Cheese Crust Pizza')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Crispy Chicken Pizza</h3>
+                    <p class="price">From Rs. 1150</p>
+                    <button class="order-btn" onclick="addToCart('Crispy Chicken Pizza')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Burgers Section -->
+        <section id="burgers">
+            <h2>Burgers</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Zinger Burger</h3>
+                    <p class="price">Rs. 400</p>
+                    <button class="order-btn" onclick="addToCart('Zinger Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Crispy Patty Burger</h3>
+                    <p class="price">Rs. 310</p>
+                    <button class="order-btn" onclick="addToCart('Crispy Patty Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Grilled Burger</h3>
+                    <p class="price">Rs. 490</p>
+                    <button class="order-btn" onclick="addToCart('Grilled Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Kababish Burger</h3>
+                    <p class="price">Rs. 310</p>
+                    <button class="order-btn" onclick="addToCart('Kababish Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Thunder Burger</h3>
+                    <p class="price">Rs. 450</p>
+                    <button class="order-btn" onclick="addToCart('Thunder Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Crown Burger</h3>
+                    <p class="price">Rs. 300</p>
+                    <button class="order-btn" onclick="addToCart('Crown Burger')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Special Snap Tower</h3>
+                    <p class="price">Rs. 550</p>
+                    <button class="order-btn" onclick="addToCart('Special Snap Tower')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wraps Section -->
+        <section id="wraps">
+            <h2>Wraps</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Chicken Shawarma</h3>
+                    <p class="price">Rs. 200</p>
+                    <button class="order-btn" onclick="addToCart('Chicken Shawarma')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Zinger Shawarma</h3>
+                    <p class="price">Rs. 280</p>
+                    <button class="order-btn" onclick="addToCart('Zinger Shawarma')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Chicken Paratha</h3>
+                    <p class="price">Rs. 300</p>
+                    <button class="order-btn" onclick="addToCart('Chicken Paratha')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Zinger Paratha</h3>
+                    <p class="price">Rs. 350</p>
+                    <button class="order-btn" onclick="addToCart('Zinger Paratha')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Arabic Tortilla Wrap</h3>
+                    <p class="price">Rs. 420</p>
+                    <button class="order-btn" onclick="addToCart('Arabic Tortilla Wrap')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Kababis Wrap</h3>
+                    <p class="price">Rs. 390</p>
+                    <button class="order-btn" onclick="addToCart('Kababis Wrap')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Zinger Tortilla Wrap</h3>
+                    <p class="price">Rs. 499</p>
+                    <button class="order-btn" onclick="addToCart('Zinger Tortilla Wrap')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Starters Section -->
+        <section id="starters">
+            <h2>Starters</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Crispy Wings</h3>
+                    <p>05 Pieces: Rs. 350 | 10 Pieces: Rs. 600</p>
+                    <button class="order-btn" onclick="addToCart('Crispy Wings')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Baked Wings</h3>
+                    <p>05 Pieces: Rs. 380 | 10 Pieces: Rs. 680</p>
+                    <button class="order-btn" onclick="addToCart('Baked Wings')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Nuggets</h3>
+                    <p>05 Pieces: Rs. 290 | 10 Pieces: Rs. 680</p>
+                    <button class="order-btn" onclick="addToCart('Nuggets')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Hot Shorts</h3>
+                    <p>10 Pieces: Rs. 310</p>
+                    <button class="order-btn" onclick="addToCart('Hot Shorts')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fries Section -->
+        <section id="fries">
+            <h2>Fries</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Plain Fries</h3>
+                    <p>Small: Rs. 200 | Large: Rs. 390</p>
+                    <button class="order-btn" onclick="addToCart('Plain Fries')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Masala Fries</h3>
+                    <p>Small: Rs. 220 | Large: Rs. 400</p>
+                    <button class="order-btn" onclick="addToCart('Masala Fries')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Mayo Loaded Fries</h3>
+                    <p>Large: Rs. 350</p>
+                    <button class="order-btn" onclick="addToCart('Mayo Loaded Fries')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Pizza Fries</h3>
+                    <p>Large: Rs. 480</p>
+                    <button class="order-btn" onclick="addToCart('Pizza Fries')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverages & Shakes Section -->
+        <section id="beverages">
+            <h2>Beverages & Shakes</h2>
+
+            <h3 style="margin-top: 1rem;">Margareta Drinks</h3>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Mint Margareta</h3>
+                    <p class="price">Rs. 200</p>
+                    <button class="order-btn" onclick="addToCart('Mint Margareta')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Stawberry Margareta</h3>
+                    <p class="price">Rs. 180</p>
+                    <button class="order-btn" onclick="addToCart('Stawberry Margareta')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Green Apple Margareta</h3>
+                    <p class="price">Rs. 180</p>
+                    <button class="order-btn" onclick="addToCart('Green Apple Margareta')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Blue Berry Margareta</h3>
+                    <p class="price">Rs. 180</p>
+                    <button class="order-btn" onclick="addToCart('Blue Berry Margareta')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Blue Lagone</h3>
+                    <p class="price">Rs. 200</p>
+                    <button class="order-btn" onclick="addToCart('Blue Lagone')">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Soft Drinks</h3>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Soft Drink (345ml)</h3>
+                    <p class="price">Rs. 70</p>
+                    <button class="order-btn" onclick="addToCart('Soft Drink 345ml')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Soft Drink (500ml)</h3>
+                    <p class="price">Rs. 90</p>
+                    <button class="order-btn" onclick="addToCart('Soft Drink 500ml')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Soft Drink (1ltr)</h3>
+                    <p class="price">Rs. 130</p>
+                    <button class="order-btn" onclick="addToCart('Soft Drink 1ltr')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Soft Drink (1.5ltr)</h3>
+                    <p class="price">Rs. 160</p>
+                    <button class="order-btn" onclick="addToCart('Soft Drink 1.5ltr')">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Milk Shakes</h3>
+            <p style="font-size: 0.9em; color: #666;">Sizes: Small (S) | Large (L)</p>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Mango Shake</h3>
+                    <p>S: Rs. 150 | L: Rs. 220</p>
+                    <button class="order-btn" onclick="addToCart('Mango Shake')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Banana Shake</h3>
+                    <p>S: Rs. 150 | L: Rs. 220</p>
+                    <button class="order-btn" onclick="addToCart('Banana Shake')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Strawberry Shake</h3>
+                    <p>S: Rs. 200 | L: Rs. 250</p>
+                    <button class="order-btn" onclick="addToCart('Strawberry Shake')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Pineapple Shake</h3>
+                    <p>S: Rs. 200 | L: Rs. 250</p>
+                    <button class="order-btn" onclick="addToCart('Pineapple Shake')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Dates Banana Shake</h3>
+                    <p>S: Rs. 200 | L: Rs. 250</p>
+                    <button class="order-btn" onclick="addToCart('Dates Banana Shake')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Addons Section -->
+        <section id="addons">
+            <h2>Addons</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3 class="item-title">Mayo Dip</h3>
+                    <p class="price">Rs. 50</p>
+                    <button class="order-btn" onclick="addToCart('Mayo Dip')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Slice Cheese</h3>
+                    <p class="price">Rs. 70</p>
+                    <button class="order-btn" onclick="addToCart('Slice Cheese')">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <h3 class="item-title">Extra Bread</h3>
+                    <p class="price">Rs. 50</p>
+                    <button class="order-btn" onclick="addToCart('Extra Bread')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Floating Cart Button -->
+        <div id="cartBtn" class="cart-float-btn" onclick="openCartModal()" style="display: none;">
+            🛒 <span id="cartCount">0</span> Items
+        </div>
+
+        <!-- Cart Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+                <span class="close-btn" onclick="closeCartModal()">&times;</span>
+                <h2>Your Cart</h2>
+                <div id="cartItemsList"></div>
+                <button class="submit-btn" onclick="openCheckout()" style="margin-top: 1.5rem;">Proceed to
+                    Checkout</button>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+            <span class="close-btn" onclick="closeCheckoutModal()">&times;</span>
+            <h2>Checkout Details</h2>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" name="address" required placeholder="Enter your complete delivery address"
+                        rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Special Instructions (Optional):</label>
+                    <textarea id="instructions" name="instructions" placeholder="Any special requests?"
+                        rows="2"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Confirm Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- View Original Menu Modal -->
+    <div id="viewMenuModal" class="modal">
+        <div class="modal-content" style="max-height: 90vh; overflow-y: auto; text-align: center;">
+            <span class="close-btn" onclick="closeMenuModal()">&times;</span>
+            <h2>Original Menu</h2>
+            <div class="menu-img-container">
+                <a href="menu1.jpg" download="Snappy_Foods_Menu_1.jpg" class="download-btn">📥 Download Page 1</a><br>
+                <img src="menu1.jpg" alt="Menu Page 1"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 10px; border: 1px solid var(--primary-color);">
+            </div>
+            <div class="menu-img-container">
+                <a href="menu2.jpg" download="Snappy_Foods_Menu_2.jpg" class="download-btn">📥 Download Page 2</a><br>
+                <img src="menu2.jpg" alt="Menu Page 2"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 10px; border: 1px solid var(--primary-color);">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
