@@ -233,3 +233,34 @@ window.onclick = function(event) {
     if (event.target == document.getElementById("cartModal")) closeCartModal();
     if (event.target == document.getElementById("checkoutModal")) closeCheckoutModal();
 }
+
+// --- Daily Unique Visitor Tracker ---
+document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toDateString(); // e.g., "Mon Jul 19 2026"
+    const lastVisit = localStorage.getItem('snappy_last_visit');
+    
+    if (lastVisit !== today) {
+        // Send tracking ping
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyNcgsnDWHOTZkZ5VPPJXAvZcWh_WBnrHuOzecchv8vnvOiKbixKx3Bk-dagDF5xGTn/exec";
+        
+        const payload = {
+            action: 'visit',
+            userAgent: navigator.userAgent
+        };
+        
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(() => {
+            // Update localStorage only after attempting to send
+            localStorage.setItem('snappy_last_visit', today);
+            console.log("Unique daily visit tracked.");
+        })
+        .catch(err => console.error("Error tracking visit:", err));
+    }
+});
