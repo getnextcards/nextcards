@@ -195,7 +195,7 @@ section {
 /* Floating Cart Button */
 .cart-float-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 70px;
     right: 30px;
     background: var(--primary-gradient);
     color: white;
