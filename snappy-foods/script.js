@@ -162,33 +162,32 @@ function submitOrder(event) {
 
     const waLink = `https://wa.me/${phoneOwner}?text=${waMessage}`;
 
+    // Send data to Google Sheets instantly on form submit
+    const sheetUrl = "https://script.google.com/macros/s/AKfycbyNcgsnDWHOTZkZ5VPPJXAvZcWh_WBnrHuOzecchv8vnvOiKbixKx3Bk-dagDF5xGTn/exec";
+    fetch(sheetUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            phone: phone,
+            address: address,
+            items: sheetItemsText,
+            total: grandTotal,
+            instructions: instructions
+        })
+    }).catch(e => console.log('Sheet upload error:', e));
+
     Swal.fire({
         title: 'Order Ready to Send!',
-        text: 'You will now be redirected to WhatsApp to send your order.',
+        text: 'Your order details have been saved. You will now be redirected to WhatsApp to send your order.',
         icon: 'success',
         confirmButtonText: 'Proceed to WhatsApp',
         confirmButtonColor: '#28a745'
     }).then((result) => {
         if (result.isConfirmed) {
-            
-            // Send data to Google Sheets silently
-            const sheetUrl = "https://script.google.com/macros/s/AKfycbyNcgsnDWHOTZkZ5VPPJXAvZcWh_WBnrHuOzecchv8vnvOiKbixKx3Bk-dagDF5xGTn/exec";
-            fetch(sheetUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    phone: phone,
-                    address: address,
-                    items: sheetItemsText,
-                    total: grandTotal,
-                    instructions: instructions
-                })
-            }).catch(e => console.log('Sheet upload error:', e));
-
             window.open(waLink, '_blank');
             closeCheckoutModal();
             cart = []; 
