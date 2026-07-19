@@ -497,3 +497,195 @@ section {
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
+
+
+
+/* Premium Hero Section Styles */
+.premium-hero {
+    position: relative;
+    padding: 4rem 5% 5rem 5%;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.15) 0%, transparent 60%);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.premium-hero-card {
+    position: relative;
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 69, 0, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.premium-hero-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(255, 69, 0, 0.4);
+    border-color: rgba(255, 69, 0, 0.8);
+}
+
+.card-badge {
+    position: absolute;
+    top: 25px;
+    left: -55px;
+    width: 220px;
+    text-align: center;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.gold-badge {
+    background: #ffc107;
+    color: #000;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-wrapper .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.premium-hero-card:hover .hero-img {
+    transform: scale(1.1);
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(20, 20, 20, 1), transparent);
+}
+
+.hero-content {
+    padding: 1.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hero-content h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+}
+
+.hero-content .desc {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.price-row {
+    margin-bottom: 1.5rem;
+}
+
+.hero-price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-order-btn {
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-order-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.hero-order-btn:hover::before {
+    left: 150%;
+}
+
+.hero-order-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .premium-hero {
+        padding: 3rem 5%;
+    }
+}
