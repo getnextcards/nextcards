@@ -214,12 +214,7 @@ function submitOrder(event) {
     });
 }
 
-// Mobile Menu Toggle
- else {
-        nav.classList.add('active');
-        btn.innerHTML = '&times;'; // Close X
-    }
-}
+
 
 // Menu Modal
 function openMenuModal() {
