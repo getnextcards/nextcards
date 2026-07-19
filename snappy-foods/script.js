@@ -125,6 +125,18 @@ function openCheckout() {
         Swal.fire('Error', 'Your cart is empty', 'error');
         return;
     }
+    
+    // Auto-fill from localStorage if available
+    if(localStorage.getItem('snappy_name')) {
+        document.getElementById('fullName').value = localStorage.getItem('snappy_name');
+    }
+    if(localStorage.getItem('snappy_phone')) {
+        document.getElementById('phone').value = localStorage.getItem('snappy_phone');
+    }
+    if(localStorage.getItem('snappy_address')) {
+        document.getElementById('address').value = localStorage.getItem('snappy_address');
+    }
+
     closeCartModal();
     document.getElementById("checkoutModal").style.display = "flex";
 }
@@ -140,6 +152,11 @@ function submitOrder(event) {
     const phone = document.getElementById("phone").value;
     const address = document.getElementById("address").value;
     const instructions = document.getElementById("instructions").value || "None";
+    
+    // Save to localStorage for next time
+    localStorage.setItem('snappy_name', name);
+    localStorage.setItem('snappy_phone', phone);
+    localStorage.setItem('snappy_address', address);
     
     let itemsText = "";
     let sheetItemsText = "";
@@ -198,12 +215,9 @@ function submitOrder(event) {
 }
 
 // Mobile Menu Toggle
-function toggleMobileMenu() {
-    const nav = document.getElementById('navbar');
-    if (nav.classList.contains('active')) {
-        nav.classList.remove('active');
-    } else {
+ else {
         nav.classList.add('active');
+        btn.innerHTML = '&times;'; // Close X
     }
 }
 

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snappy Foods Dhanote</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- SweetAlert2 for beautiful popups -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -14,30 +17,26 @@
 <body>
 
     <header>
-        <div class="top-bar"
-            style="background: var(--primary-gradient); color: black; text-align: center; padding: 5px; font-weight: bold;">
-            Contact / Free Delivery: 0301-7197577
+        
+        <div class="logo-container" style="flex: 0 0 auto;">
+            <img src="logo.png" alt="Snappy Foods Logo" onerror="this.style.display='none'" style="height: 40px; width: 40px;">
+            <h1 style="margin:0;">SNAPPY FOODS</h1>
         </div>
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="logo.png" alt="Snappy Foods Logo" onerror="this.style.display='none'">
-                <h1>SNAPPY FOODS</h1>
-            </div>
-            <button class="menu-toggle" onclick="toggleMobileMenu()">&#9776;</button>
-        </div>
+        
         <nav id="navbar">
             <a href="#" onclick="openMenuModal()"
                 style="color: var(--primary-color); border: 1px solid var(--primary-color);">📄 View Original Menu</a>
-            <a href="#budget-deals" onclick="toggleMobileMenu()">Budget Deals</a>
-            <a href="#special-deals" onclick="toggleMobileMenu()">Special Deals</a>
-            <a href="#pizzas" onclick="toggleMobileMenu()">Pizzas</a>
-            <a href="#burgers" onclick="toggleMobileMenu()">Burgers</a>
-            <a href="#wraps" onclick="toggleMobileMenu()">Wraps</a>
-            <a href="#starters" onclick="toggleMobileMenu()">Starters</a>
-            <a href="#fries" onclick="toggleMobileMenu()">Fries</a>
-            <a href="#beverages" onclick="toggleMobileMenu()">Beverages</a>
-            <a href="#addons" onclick="toggleMobileMenu()">Addons</a>
+            <a href="#budget-deals" >Budget Deals</a>
+            <a href="#special-deals" >Special Deals</a>
+            <a href="#pizzas" >Pizzas</a>
+            <a href="#burgers" >Burgers</a>
+            <a href="#wraps" >Wraps</a>
+            <a href="#starters" >Starters</a>
+            <a href="#fries" >Fries</a>
+            <a href="#beverages" >Beverages</a>
+            <a href="#addons" >Addons</a>
         </nav>
+        
     </header>
 
     <main>
@@ -578,7 +577,14 @@
         </div>
     </div>
 
+    
+    <!-- Fixed Bottom Bar -->
+    <div class="bottom-bar">
+        <span style="display:inline-block; margin-right:10px;">🏍️ Free Delivery</span> | <span style="display:inline-block; margin-left:10px;">📞 <a href="tel:03017197577" style="color: black; text-decoration: none;">0301-7197577</a></span>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
