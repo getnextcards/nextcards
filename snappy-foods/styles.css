@@ -4,8 +4,10 @@
 :root {
     --primary-color: #ffc107;
     --primary-gradient: linear-gradient(135deg, #ffc107, #ff8f00);
-    --bg-overlay: rgba(11, 15, 25, 0.85); /* Dark cinematic overlay */
-    --card-bg: rgba(255, 255, 255, 0.05); /* Glass effect */
+    --bg-overlay: rgba(11, 15, 25, 0.85);
+    /* Dark cinematic overlay */
+    --card-bg: rgba(255, 255, 255, 0.05);
+    /* Glass effect */
     --card-border: rgba(255, 255, 255, 0.1);
     --text-main: #ffffff;
     --text-muted: #b0b3b8;
@@ -27,7 +29,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     margin: 0;
 }
@@ -39,7 +46,7 @@ h2 {
     display: inline-block;
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
@@ -55,7 +62,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .top-bar {
@@ -101,9 +108,9 @@ main {
 section {
     margin-bottom: 4rem;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
@@ -134,9 +141,11 @@ section {
 .item-card::before {
     content: '';
     position: absolute;
-    top: 0; left: -100%;
-    width: 50%; height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
     transform: skewX(-25deg);
     transition: all 0.7s;
 }
@@ -147,7 +156,7 @@ section {
 
 .item-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 15px rgba(255, 69, 0, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 69, 0, 0.3);
     border-color: rgba(255, 69, 0, 0.5);
     background: rgba(255, 255, 255, 0.08);
 }
@@ -212,17 +221,17 @@ section {
     font-family: var(--font-heading);
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.6), 0 0 15px rgba(255, 69, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 69, 0, 0.5);
     z-index: 999;
     align-items: center;
     gap: 12px;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cart-float-btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.7), 0 0 20px rgba(255, 69, 0, 0.7);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.7);
 }
 
 #cartCount {
@@ -231,19 +240,19 @@ section {
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 1rem;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Modals with Dark Glassmorphism */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.8); 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
     align-items: center;
     justify-content: center;
@@ -253,12 +262,12 @@ section {
     background: rgba(15, 20, 30, 0.95);
     margin: auto;
     padding: 2.5rem;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 90%;
     max-width: 500px;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
     color: #fff;
 }
 
@@ -300,11 +309,11 @@ section {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     box-sizing: border-box;
     font-family: inherit;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -317,7 +326,7 @@ section {
 }
 
 .form-group input[readonly] {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
 }
 
@@ -354,9 +363,9 @@ section {
 }
 
 .cart-item-row input[type="number"] {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     padding: 5px;
     width: 60px;
@@ -375,20 +384,21 @@ section {
 /* SweetAlert Dark Theme Override */
 .swal2-popup {
     background: rgba(15, 20, 30, 0.95) !important;
-    border: 1px solid rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 16px !important;
     color: #fff !important;
     backdrop-filter: blur(10px) !important;
 }
 
-.swal2-title, .swal2-html-container {
+.swal2-title,
+.swal2-html-container {
     color: #fff !important;
 }
 
 .swal2-input {
-    background: rgba(0,0,0,0.5) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
     color: #fff !important;
-    border-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .swal2-input:focus {
@@ -405,16 +415,19 @@ section {
     padding: 1rem;
     position: relative;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .logo-container img {
     height: 60px;
     width: auto;
     border-radius: 50%;
 }
+
 .logo-container h1 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -439,6 +452,7 @@ section {
     .menu-toggle {
         display: block;
     }
+
     nav {
         display: none;
         flex-direction: column;
@@ -447,13 +461,15 @@ section {
         padding: 1rem 0;
         gap: 0.5rem;
     }
+
     nav.active {
         display: flex;
     }
+
     nav a {
         text-align: center;
         padding: 0.8rem;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         border-radius: 0;
     }
 }
@@ -463,12 +479,14 @@ section {
     text-align: center;
     margin-bottom: 1rem;
 }
+
 .menu-img-container img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
     border: 1px solid var(--primary-color);
 }
+
 .download-btn {
     display: inline-block;
     background: var(--primary-gradient);
