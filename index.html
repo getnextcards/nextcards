@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextCards | Premium Digital Invitations & Pages</title>
+    <title>NextCards | Premium Digital Invitations & Professional Pages</title>
     
     <!-- Comprehensive SEO Optimization -->
     <meta name="description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, birthday cards, and professional booking pages. Elevate your digital presence today.">
     <meta name="keywords" content="digital wedding invitations, digital business cards, professional booking pages, online invitations, custom digital invites, NextCards">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://nextcards.github.io/">
+    <link rel="icon" type="image/png" href="images/main-logo.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextcards.github.io/">
     <meta property="og:title" content="NextCards | Premium Digital Invitations & Pages">
     <meta property="og:description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, and professional booking pages. Elevate your digital presence today.">
+    <meta property="og:image" content="images/main-logo.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nextcards.github.io/">
     <meta property="twitter:title" content="NextCards | Premium Digital Invitations & Pages">
     <meta property="twitter:description" content="NextCards agency creates fully customized digital wedding invitations, digital business cards, and professional booking pages. Elevate your digital presence today.">
+    <meta property="twitter:image" content="images/main-logo.png">
 
     <!-- JSON-LD Structured Data for Organization/Agency -->
     <script type="application/ld+json">
@@ -30,6 +33,7 @@
       "@type": "ProfessionalService",
       "name": "NextCards Agency",
       "url": "https://nextcards.github.io/",
+      "logo": "https://nextcards.github.io/images/main-logo.png",
       "description": "Premium digital invitations, digital business cards, and professional booking pages.",
       "sameAs": [
         "https://wa.me/1234567890"
@@ -40,7 +44,7 @@
     <!-- Fonts: Outfit for Headings, Inter for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -53,25 +57,30 @@
                         display: ['"Outfit"', 'sans-serif'],
                     },
                     colors: {
-                        darkBg: '#0b0f19',
-                        darkSurface: '#151b2b',
-                        neonPurple: '#d946ef',
-                        neonBlue: '#0ea5e9',
-                        neonPink: '#f43f5e'
+                        darkBg: '#07090e',
+                        darkSurface: '#0f121d',
+                        darkCard: '#141826',
+                        silverLight: '#f8fafc',
+                        silver: '#cbd5e1',
+                        silverMuted: '#94a3b8',
+                        accentGlow: 'rgba(255, 255, 255, 0.15)',
                     },
                     animation: {
-                        'blob': 'blob 10s infinite',
-                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 4s infinite alternate',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                     },
                     keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseGlow: {
+                            '0%': { opacity: '0.15', transform: 'scale(1)' },
+                            '100%': { opacity: '0.35', transform: 'scale(1.08)' },
                         },
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
@@ -81,24 +90,51 @@
     </script>
 
     <style>
-        /* Glassmorphism utility */
+        /* Modern Glassmorphism & Metallic Aesthetics */
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(18, 22, 34, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
+        .glass-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         .glass-hover:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            background: rgba(26, 32, 50, 0.85);
+            border-color: rgba(255, 255, 255, 0.22);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px 0 rgba(255, 255, 255, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .metallic-border {
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.1) 100%) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
         }
 
         .text-gradient {
-            background-clip: text;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-silver {
+            background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ambient geometric background grid */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
 
         /* Custom Scrollbar */
@@ -106,66 +142,98 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0b0f19;
+            background: #07090e;
         }
         ::-webkit-scrollbar-thumb {
             background: #1e293b;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #d946ef;
+            background: #475569;
         }
     </style>
 </head>
 
-<body class="bg-darkBg text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-neonPurple selection:text-white">
+<body class="bg-darkBg text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-slate-700 selection:text-white relative">
 
-    <!-- Glowing Background Blobs -->
-    <div class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-neonPurple rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob"></div>
-        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-neonBlue rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-neonPink rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-blob" style="animation-delay: 4s;"></div>
+    <!-- Ambient Geometric Lighting & Grid Background -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0 bg-grid-pattern">
+        <!-- Top Metallic Ambient Glow -->
+        <div class="absolute top-[-15%] left-[50%] -translate-x-1/2 w-[700px] h-[500px] bg-slate-400/10 rounded-full mix-blend-screen filter blur-[150px] animate-pulse-glow"></div>
+        <div class="absolute top-[30%] left-[-10%] w-[500px] h-[500px] bg-blue-500/5 rounded-full mix-blend-screen filter blur-[140px]"></div>
+        <div class="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-slate-300/5 rounded-full mix-blend-screen filter blur-[160px]"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass border-b-0 border-white/10">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl font-display font-bold text-white tracking-tight">Next<span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonPurple">Cards</span></span>
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="relative flex items-center justify-center p-1 rounded-xl bg-white/5 border border-white/10 group-hover:border-white/30 transition duration-300">
+                    <img src="images/main-logo.png" alt="NextCards Logo" class="h-9 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-display font-extrabold text-white tracking-wider flex items-center">
+                        NEXT<span class="text-gradient-silver font-light ml-1">CARDS</span>
+                    </span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-semibold -mt-1">Digital Agency</span>
+                </div>
+            </a>
+
+            <!-- Menu Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Services</a>
+                <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Client Reviews</a>
+                <a href="#order" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Contact Us</a>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition">Services</a>
-                <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-white transition">Reviews</a>
-            </div>
+
+            <!-- Header CTA -->
             <div>
-                <a href="#order" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-all duration-300 shadow-[0_0_15px_rgba(217,70,239,0.3)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)]">Order Now</a>
+                <a href="#order" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.08)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]">
+                    Order Now
+                </a>
             </div>
         </div>
     </nav>
 
-    <div class="relative z-10 pt-24 pb-12 sm:pt-32">
+    <div class="relative z-10 pt-28 pb-16 sm:pt-36">
+        
         <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-8 py-20 text-center flex flex-col items-center">
-            <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-fade-in-up">
-                <span class="flex w-2 h-2 rounded-full bg-neonBlue mr-2 animate-pulse"></span>
-                <span class="text-xs font-medium text-slate-300 tracking-wider uppercase">Premium Digital Pages</span>
+        <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 text-center flex flex-col items-center">
+            
+            <!-- Sleek 3D Logo Showcase Card -->
+            <div class="relative mb-10 group animate-fade-in-up">
+                <div class="absolute -inset-1 bg-gradient-to-r from-slate-400/20 via-white/30 to-slate-500/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-700"></div>
+                <div class="relative glass rounded-3xl p-6 border border-white/20 shadow-2xl flex items-center justify-center bg-slate-950/80 backdrop-blur-2xl">
+                    <img src="images/main-logo.png" alt="NextCards 3D Diamond Logo" class="h-28 md:h-36 w-auto object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)] transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- Top Pill Badge -->
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <span class="flex w-2 h-2 rounded-full bg-white mr-2 animate-ping"></span>
+                <span class="text-xs font-semibold text-slate-200 tracking-widest uppercase">Next Generation Digital Experiences</span>
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-display font-extrabold text-white tracking-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white tracking-tight leading-[1.1] mb-6 max-w-4xl animate-fade-in-up" style="animation-delay: 0.2s;">
                 Your Digital Presence,<br>
-                <span class="bg-gradient-to-r from-neonBlue via-neonPurple to-neonPink text-gradient">Elevated.</span>
+                <span class="text-gradient">Elevated in 3D Precision.</span>
             </h1>
             
-            <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
-                From fully customized, interactive wedding invitations to professional booking pages for doctors and consultants. We build digital experiences that leave a lasting impression.
+            <!-- Sub-headline -->
+            <p class="mt-2 text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
+                From interactive digital wedding invitations to high-converting booking pages & digital portfolios. We engineer custom web experiences designed to impress.
             </p>
             
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.3s;">
-                <a href="#order" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-neonPurple to-neonBlue shadow-[0_0_20px_rgba(217,70,239,0.4)] hover:shadow-[0_0_30px_rgba(217,70,239,0.6)] transform hover:-translate-y-1 transition-all duration-300">
+            <!-- Call to Actions -->
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-bold tracking-widest uppercase text-slate-950 bg-gradient-to-r from-slate-100 via-white to-slate-300 shadow-[0_0_25px_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_rgba(255,255,255,0.45)] transform hover:-translate-y-0.5 transition-all duration-300">
                     Start Your Project
                 </a>
-                <a href="#services" class="px-8 py-4 rounded-full text-base font-semibold text-white glass glass-hover transition-all duration-300">
-                    Explore Services
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold text-slate-200 glass glass-hover border border-white/10 hover:border-white/30 transition-all duration-300">
+                    Explore Live Work
                 </a>
             </div>
         </section>
@@ -173,70 +241,76 @@
         <!-- Services Section -->
         <section id="services" class="py-24 relative">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">What We Craft For You</h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto">No templates, no limits. Every page is tailored to your unique identity, event, or profession.</p>
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs uppercase tracking-widest text-slate-400 mb-3">Portfolio & Offerings</div>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">What We Craft For You</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Custom tailored to your exact specifications. No restrictive templates — pure digital artistry.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
                     <!-- Wedding Card -->
-                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                    <div class="glass glass-hover rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full filter blur-[50px] pointer-events-none"></div>
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neonPink/20 to-neonPurple/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <span class="text-2xl">💍</span>
+                            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/15 mb-6 text-2xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                                💍
                             </div>
+                            <div class="inline-block px-2.5 py-0.5 rounded-md bg-white/10 border border-white/10 text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-3">Live Demo Available</div>
                             <h3 class="text-2xl font-display font-bold text-white mb-3">Wedding & Event Invites</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Wow your guests with a stunning, interactive digital invitation. Features include RSVP forms, countdown timers, photo galleries, and embedded map locations.</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Elevate your special day with interactive digital cards featuring instant RSVP integration, countdown clocks, event locations, photo galleries, and custom audio playback.</p>
                         </div>
-                        <a href="./demo/index.html" target="_blank" class="inline-flex items-center text-neonPink text-sm font-semibold hover:text-white transition-colors duration-300">
-                            View Live Demo 
-                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        <a href="./demo/index.html" target="_blank" class="inline-flex items-center text-white text-sm font-semibold hover:text-slate-300 transition-colors duration-300">
+                            View Live Demo
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
                     </div>
 
-                    <!-- Business Card -->
-                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                    <!-- Snappy Foods / Business Project -->
+                    <div class="glass glass-hover rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full filter blur-[50px] pointer-events-none"></div>
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <span class="text-2xl">💼</span>
+                            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/15 mb-6 text-2xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                                🍕
                             </div>
-                            <h3 class="text-2xl font-display font-bold text-white mb-3">Digital Business Cards</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Ditch paper cards. Get a sleek digital portfolio containing your links, contacts, resume, and bio. Easily shared via a single link or QR code.</p>
+                            <div class="inline-block px-2.5 py-0.5 rounded-md bg-white/10 border border-white/10 text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-3">Live Demo Available</div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Interactive Digital Menus & Stores</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Modern interactive online ordering menus for restaurants and cafes. Includes dynamic budget deal cards, automated WhatsApp cart checkout, and downloadable menus.</p>
                         </div>
-                        <a href="#order" class="inline-flex items-center text-neonBlue text-sm font-semibold hover:text-white transition-colors duration-300">
-                            Order Yours 
-                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        <a href="./snappy-foods/index.html" target="_blank" class="inline-flex items-center text-white text-sm font-semibold hover:text-slate-300 transition-colors duration-300">
+                            View Live Demo
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
                     </div>
 
-                    <!-- Booking Pages -->
-                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                    <!-- Digital Business Cards -->
+                    <div class="glass glass-hover rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <span class="text-2xl">🩺</span>
+                            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/15 mb-6 text-2xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                                💼
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-3">Digital Business Portfolios</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Ditch paper cards. A sleek digital card hosting your social links, instant contact save (.vcf), bio, work portfolio, and QR code sharing capabilities.</p>
+                        </div>
+                        <a href="#order" class="inline-flex items-center text-slate-300 text-sm font-semibold hover:text-white transition-colors duration-300">
+                            Order Yours
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Professional Booking Pages -->
+                    <div class="glass glass-hover rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/15 mb-6 text-2xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                                🩺
                             </div>
                             <h3 class="text-2xl font-display font-bold text-white mb-3">Professional Booking Pages</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Perfect for Doctors, Consultants, and Salons. A branded landing page where your clients can view your services and easily send appointment requests.</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Tailored for Doctors, Consultants, Salons, and Agencies. Allow clients to view your services, check availability, and submit booking requests directly.</p>
                         </div>
-                        <a href="#order" class="inline-flex items-center text-emerald-400 text-sm font-semibold hover:text-white transition-colors duration-300">
+                        <a href="#order" class="inline-flex items-center text-slate-300 text-sm font-semibold hover:text-white transition-colors duration-300">
                             Get Setup Today
-                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
-                    </div>
-
-                    <!-- Custom Anything -->
-                    <div class="glass glass-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group">
-                        <div>
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <span class="text-2xl">✨</span>
-                            </div>
-                            <h3 class="text-2xl font-display font-bold text-white mb-3">Custom Websites</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Have an idea? Birthday parties, baby showers, personal blogs, or product launches. We can build a custom, eye-catching page for anything you desire.</p>
-                        </div>
-                        <a href="#order" class="inline-flex items-center text-amber-400 text-sm font-semibold hover:text-white transition-colors duration-300">
-                            Discuss Idea
-                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
                     </div>
 
@@ -247,14 +321,16 @@
         <!-- Reviews Section (Fetched dynamically) -->
         <section id="reviews" class="py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Loved by our Clients</h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto">Don't just take our word for it. Read what people are saying about NextCards.</p>
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs uppercase tracking-widest text-slate-400 mb-3">Client Feedback</div>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Loved by Our Clients</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Read verified reviews from clients who elevated their digital presence with NextCards.</p>
                 </div>
                 
                 <!-- Loading State -->
                 <div id="reviews-loader" class="flex justify-center items-center py-12">
-                    <svg class="animate-spin h-8 w-8 text-neonPurple" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg class="animate-spin h-8 w-8 text-white opacity-80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -276,76 +352,77 @@
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     
-                    <!-- Order Form -->
-                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-neonBlue rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                    <!-- Order Form Card -->
+                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden border border-white/15">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full filter blur-[60px] pointer-events-none"></div>
                         
                         <h2 class="text-3xl font-display font-bold text-white mb-2">Start Your Project</h2>
-                        <p class="text-slate-400 text-sm mb-8">Fill out the form below and we will get back to you with a quote within 24 hours.</p>
+                        <p class="text-slate-400 text-sm mb-8">Fill out the form below and our team will get back to you with a custom quote within 24 hours.</p>
 
-                        <div id="order-success" class="hidden bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Order received! We'll contact you shortly.
+                        <div id="order-success" class="hidden bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Order received! We'll contact you shortly.</span>
                         </div>
 
                         <form id="orderForm" class="space-y-5 relative z-10" onsubmit="submitForm(event, 'order')">
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Name</label>
-                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="John Doe">
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white focus:ring-1 focus:ring-white focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="e.g. Ali Khan">
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">WhatsApp / Phone</label>
-                                <input type="text" name="phone" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="+1 234 567 8900">
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">WhatsApp / Phone Number</label>
+                                <input type="text" name="phone" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white focus:ring-1 focus:ring-white focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="+92 300 1234567">
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Service Needed</label>
-                                <select name="serviceType" class="w-full px-4 py-3 bg-darkSurface border border-white/10 focus:border-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm">
-                                    <option value="Wedding Invite">Wedding / Event Invite</option>
-                                    <option value="Business Card">Digital Business Card</option>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Service Required</label>
+                                <select name="serviceType" class="w-full px-4 py-3 bg-darkCard border border-white/10 focus:border-white focus:outline-none rounded-xl text-white transition duration-300 text-sm">
+                                    <option value="Wedding Invite">Digital Wedding / Event Invite</option>
+                                    <option value="Digital Menu / Store">Digital Food Menu / Ordering Page</option>
+                                    <option value="Business Card">Digital Business Card & Bio Link</option>
                                     <option value="Booking Page">Professional Booking Page</option>
-                                    <option value="Custom Project">Other Custom Project</option>
+                                    <option value="Custom Project">Other Custom Website Concept</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Project Details</label>
-                                <textarea name="message" rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonBlue focus:ring-1 focus:ring-neonBlue focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="Tell us a bit about what you need..."></textarea>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Project Requirements</label>
+                                <textarea name="message" rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white focus:ring-1 focus:ring-white focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="Tell us a bit about your event, business, or desired features..."></textarea>
                             </div>
-                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-neonBlue to-neonPurple hover:opacity-90 text-white rounded-xl shadow-[0_0_15px_rgba(217,70,239,0.3)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)] transition-all duration-300 font-semibold text-sm tracking-widest uppercase flex justify-center items-center">
-                                <span>Submit Request</span>
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-slate-100 via-white to-slate-300 hover:opacity-95 text-slate-950 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300 font-bold text-sm tracking-widest uppercase flex justify-center items-center">
+                                <span>Submit Project Request</span>
                             </button>
                         </form>
                     </div>
 
-                    <!-- Leave a Review Form -->
-                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-center">
-                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-neonPurple rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                    <!-- Leave a Review Form Card -->
+                    <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden border border-white/15 flex flex-col justify-center">
+                        <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full filter blur-[60px] pointer-events-none"></div>
                         
                         <h2 class="text-3xl font-display font-bold text-white mb-2">Leave a Review</h2>
-                        <p class="text-slate-400 text-sm mb-8">Already a client? We'd love to hear about your experience.</p>
+                        <p class="text-slate-400 text-sm mb-8">Already a NextCards client? Share your experience with us.</p>
 
-                        <div id="review-success" class="hidden bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Review submitted! It will appear after approval.
+                        <div id="review-success" class="hidden bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl p-4 mb-6 text-sm flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Review submitted! It will appear after approval.</span>
                         </div>
 
                         <form id="reviewForm" class="space-y-5 relative z-10" onsubmit="submitForm(event, 'review')">
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Name</label>
-                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonPurple focus:ring-1 focus:ring-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="Your Name">
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white focus:ring-1 focus:ring-white focus:outline-none rounded-xl text-white transition duration-300 text-sm placeholder-slate-500" placeholder="Your Name">
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Rating (out of 5)</label>
-                                <select name="rating" class="w-full px-4 py-3 bg-darkSurface border border-white/10 focus:border-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm">
-                                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
-                                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Great</option>
-                                    <option value="⭐⭐⭐">⭐⭐⭐ Good</option>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Rating</label>
+                                <select name="rating" class="w-full px-4 py-3 bg-darkCard border border-white/10 focus:border-white focus:outline-none rounded-xl text-white transition duration-300 text-sm">
+                                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent (5 Stars)</option>
+                                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Great (4 Stars)</option>
+                                    <option value="⭐⭐⭐">⭐⭐⭐ Good (3 Stars)</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Your Review</label>
-                                <textarea name="reviewText" required rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neonPurple focus:ring-1 focus:ring-neonPurple focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="How did you like your NextCards page?"></textarea>
+                                <textarea name="reviewText" required rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white focus:ring-1 focus:ring-white focus:outline-none rounded-xl text-white transition duration-300 text-sm resize-none placeholder-slate-500" placeholder="How did you like your NextCards experience?"></textarea>
                             </div>
-                            <button type="submit" class="w-full py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl transition-all duration-300 font-semibold text-sm tracking-widest uppercase flex justify-center items-center">
+                            <button type="submit" class="w-full py-4 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white rounded-xl transition-all duration-300 font-bold text-sm tracking-widest uppercase flex justify-center items-center">
                                 <span>Post Review</span>
                             </button>
                         </form>
@@ -356,10 +433,25 @@
         </section>
 
         <!-- Footer -->
-        <footer class="border-t border-white/5 pt-12 pb-8 mt-12 relative z-10">
+        <footer class="border-t border-white/10 pt-16 pb-12 mt-12 relative z-10 bg-slate-950/60">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
-                <span class="text-2xl font-display font-bold text-white tracking-tight mb-4 opacity-50 grayscale">NextCards</span>
-                <p class="text-sm text-slate-500 mb-6">Redefining digital invitations and professional profiles.</p>
+                
+                <!-- Main Logo branding in footer -->
+                <div class="mb-4 p-2 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                    <img src="images/main-logo.png" alt="NextCards Logo" class="h-16 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
+                </div>
+                
+                <h3 class="text-xl font-display font-extrabold text-white tracking-widest mb-2">NEXTCARDS</h3>
+                <p class="text-sm text-slate-400 mb-8 max-w-md">Redefining digital invitations, interactive restaurant menus, and professional digital identity.</p>
+                
+                <div class="flex space-x-6 text-xs text-slate-500 mb-8">
+                    <a href="#services" class="hover:text-slate-300 transition">Services</a>
+                    <span>•</span>
+                    <a href="#reviews" class="hover:text-slate-300 transition">Reviews</a>
+                    <span>•</span>
+                    <a href="#order" class="hover:text-slate-300 transition">Order Form</a>
+                </div>
+
                 <p class="text-xs text-slate-600">&copy; 2026 NextCards Agency. All rights reserved.</p>
             </div>
         </footer>
@@ -367,7 +459,7 @@
 
     <!-- Integration Script -->
     <script>
-        // The URL provided by the user
+        // The URL provided by the user for Google Sheet Web App Integration
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7FNAdpyznBFL19pXjQSlqNVm4CSg494UTyFxg7LVkzyG2IlL1N_muPZsRjXvWa4JAmA/exec';
 
         // Fetch Reviews on Page Load
@@ -394,7 +486,7 @@
                 reviews.forEach(review => {
                     // Create review card
                     const card = document.createElement('div');
-                    card.className = 'glass p-8 rounded-3xl relative';
+                    card.className = 'glass glass-hover p-8 rounded-3xl relative border border-white/10';
                     
                     // Add quote icon watermark
                     const quoteIcon = `<svg class="absolute top-6 right-6 w-10 h-10 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>`;
@@ -402,14 +494,14 @@
                     card.innerHTML = `
                         ${quoteIcon}
                         <div class="mb-4 text-sm">${review.rating}</div>
-                        <p class="text-slate-300 italic mb-6 leading-relaxed relative z-10">"${escapeHTML(review.text)}"</p>
+                        <p class="text-slate-300 italic mb-6 leading-relaxed relative z-10 text-sm">"${escapeHTML(review.text)}"</p>
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-neonBlue to-neonPurple flex items-center justify-center text-white font-bold font-display shadow-sm mr-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-slate-200 to-slate-400 text-slate-950 font-bold font-display shadow-sm mr-3 flex items-center justify-center text-sm">
                                 ${review.name.charAt(0).toUpperCase()}
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold text-sm">${escapeHTML(review.name)}</h4>
-                                <span class="text-slate-500 text-xs">Verified Client</span>
+                                <span class="text-slate-500 text-xs font-medium">Verified Client</span>
                             </div>
                         </div>
                     `;
@@ -435,10 +527,10 @@
             // Loading state
             submitBtn.disabled = true;
             submitBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" fill="none" viewBox="0 0 24 24">
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-900 inline-block" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg> Sending...`;
+                </svg> Submitting...`;
 
             // Prepare Data
             const formData = new URLSearchParams(new FormData(form));
@@ -458,7 +550,7 @@
             })
             .catch(error => {
                 console.error("Error submitting form:", error);
-                alert("There was an error. Please try again.");
+                alert("There was an error submitting your request. Please try again.");
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
             });

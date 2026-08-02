@@ -20,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-main);
-    background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('bg.png');
+    background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('images/bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
