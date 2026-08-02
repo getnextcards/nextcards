@@ -1,0 +1,428 @@
+/* Pakistani Classic Clinic Flex Banner Aesthetics - Light Theme - Dr. Abdul Waheed Shah Clinic */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;600;700;800;900&display=swap');
+
+:root {
+    --clinic-emerald: #046c4e;
+    --clinic-emerald-dark: #024734;
+    --clinic-emerald-light: #059669;
+    --clinic-emerald-bg: #ecfdf5;
+    --clinic-gold: #d97706;
+    --clinic-gold-light: #b45309;
+    --clinic-gold-bg: #fffbeb;
+    --clinic-red: #dc2626;
+    --clinic-red-dark: #991b1b;
+    --page-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Flex Pattern Light */
+.bg-pattern {
+    background-size: 30px 30px;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Top Bismillah Header Bar */
+.bismillah-bar {
+    background: linear-gradient(135deg, #024734 0%, #046c4e 50%, #024734 100%);
+    border-bottom: 3px solid #d97706;
+    padding: 10px 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bismillah-text {
+    font-family: var(--font-urdu);
+    color: #fef3c7;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1.8;
+}
+
+/* FREE CONSULTATION HERO BANNER */
+.free-banner {
+    background: linear-gradient(90deg, #b91c1c 0%, #dc2626 50%, #b91c1c 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    border-bottom: 2px solid #fef3c7;
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.free-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.free-badge {
+    background: #fef3c7;
+    color: #991b1b;
+    font-weight: 800;
+    padding: 4px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+.free-text-urdu {
+    font-family: var(--font-urdu);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.free-text-en {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    color: #fef3c7;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); box-shadow: 0 0 5px rgba(254, 243, 199, 0.5); }
+    100% { transform: scale(1.06); box-shadow: 0 0 20px rgba(254, 243, 199, 0.9); }
+}
+
+/* MAIN PAKISTANI CLINIC FLEX CONTAINER */
+.flex-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Authentic Pakistani Clinic Flex Board Showcase (Green & Gold) */
+.flex-board {
+    background: linear-gradient(145deg, #046c4e 0%, #024734 100%);
+    border: 4px solid #d97706;
+    border-radius: 28px;
+    padding: 35px 25px;
+    box-shadow: 0 20px 45px rgba(4, 108, 78, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.shifa-stamp {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(217, 119, 6, 0.25);
+    border: 2px dashed #fef3c7;
+    padding: 6px 18px;
+    border-radius: 50px;
+    color: #fef3c7;
+    font-family: var(--font-urdu);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.clinic-title-urdu {
+    font-family: var(--font-urdu);
+    color: #fef3c7;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    margin-bottom: 5px;
+    line-height: 1.7;
+}
+
+.clinic-title-en {
+    font-family: var(--font-heading);
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.qualification-strip {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.qual-tag {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(254, 243, 199, 0.5);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.location-tag-banner {
+    background: linear-gradient(90deg, #d97706 0%, #b45309 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 15px 0 0 0;
+    box-shadow: 0 6px 15px rgba(217, 119, 6, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* CLINIC FACILITIES GRID (سہولیات) */
+.section-title {
+    text-align: center;
+    margin: 45px 0 25px 0;
+}
+
+.section-title-urdu {
+    font-family: var(--font-urdu);
+    color: var(--clinic-emerald);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-title-en {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.facility-card {
+    background: var(--card-bg);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px 18px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    border-color: #046c4e;
+    box-shadow: 0 15px 35px rgba(4, 108, 78, 0.15);
+}
+
+.facility-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.facility-title-urdu {
+    font-family: var(--font-urdu);
+    color: var(--clinic-emerald);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.facility-title-en {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.facility-desc {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-top: 6px;
+}
+
+/* SPECIAL BADGE HIGHLIGHT FOR FREE CONSULTATION & LAB */
+.badge-free {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+/* TREATMENTS SECTION */
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.treatment-item {
+    background: var(--clinic-emerald-bg);
+    border: 1px solid #a7f3d0;
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(4, 108, 78, 0.05);
+}
+
+.treatment-check {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #046c4e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.treatment-info-urdu {
+    font-family: var(--font-urdu);
+    color: #064e3b;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.treatment-info-en {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* TIMINGS & APPOINTMENT SECTION */
+.timing-box {
+    background: #ffffff;
+    border: 2px solid #fcd34d;
+    border-radius: 24px;
+    padding: 30px;
+    margin: 45px 0;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.timing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.timing-row:last-child {
+    border-bottom: none;
+}
+
+.timing-label-urdu {
+    font-family: var(--font-urdu);
+    color: var(--clinic-emerald);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.timing-value {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 4px 14px;
+    border-radius: 12px;
+}
+
+/* ACTION BUTTONS */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff;
+    font-weight: 800;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+}
+
+.btn-call {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: #ffffff;
+    font-weight: 800;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-call:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(217, 119, 6, 0.5);
+}
+
+/* FOOTER */
+.clinic-footer {
+    text-align: center;
+    padding: 40px 20px 100px 20px;
+    background: #0f172a;
+    color: #ffffff;
+    border-top: 1px solid #334155;
+}
