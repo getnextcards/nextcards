@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheraz Somroo | 25th Birthday Celebration</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official 25th Birthday Celebration for Sheraz Somroo. Panoramic 3D Sensor World, interactive 3D cards, 25 balloon pop wishes & music.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/main-logo.png">
+
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-outfit overflow-x-hidden selection:bg-amber-400 selection:text-slate-950">
+
+    <!-- Ambient Particle Canvas (Background Layer 0) -->
+    <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-50"></canvas>
+
+    <!-- FLOATING BACKGROUND EMOJIS LAYER (Layer 2 - Behind main content) -->
+    <div id="floating-emojis-container" class="fixed inset-0 pointer-events-none z-[2] overflow-hidden">
+        <!-- Dynamic Floating Emojis spawned by script.js -->
+    </div>
+
+    <!-- CINEMATIC 24 BLAST -> 25 SMOOTH REVEAL & AUTOMATIC DISSOLVE OVERLAY -->
+    <div id="intro-splash" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-3xl flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-all duration-1000">
+        
+        <!-- Glowing Shockwave Aura Ring -->
+        <div id="splash-aura" class="absolute w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-600/20 rounded-full filter blur-[120px] transition-all duration-1000 animate-pulse"></div>
+
+        <div class="relative z-10 space-y-6 max-w-2xl">
+            
+            <!-- STAGE 1: FAREWELL TO 24 -->
+            <div id="stage-24" class="transition-all duration-700">
+                <span class="font-outfit text-amber-400 text-xs tracking-[0.35em] uppercase bg-amber-400/10 px-5 py-1.5 rounded-full border border-amber-400/30">
+                    Farewell To Age 24 👋
+                </span>
+                <div class="my-6">
+                    <h1 id="number-24" class="font-space text-9xl sm:text-[14rem] font-black text-transparent bg-clip-text bg-gradient-to-b from-slate-400 via-slate-500 to-slate-700 tracking-tighter drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] animate-pulse">
+                        24
+                    </h1>
+                </div>
+                <p class="font-dancing-script text-2xl text-slate-300">
+                    Unlocking Quarter-Century Greatness...
+                </p>
+            </div>
+
+            <!-- STAGE 2: GLORIOUS 25 ENTRANCE -->
+            <div id="stage-25" class="hidden transition-all duration-1000 transform scale-50 opacity-0 space-y-4">
+                <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 font-outfit font-bold px-6 py-2 rounded-full text-xs tracking-[0.2em] uppercase shadow-2xl shadow-amber-500/30 border border-amber-200">
+                    <span>👑 SILVER JUBILEE UNLOCKED 👑</span>
+                </div>
+                
+                <div>
+                    <h1 id="number-25" class="font-space text-9xl sm:text-[15rem] font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-100 via-amber-300 to-yellow-600 drop-shadow-[0_0_100px_rgba(245,158,11,0.95)]">
+                        25
+                    </h1>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="font-great-vibes text-4xl sm:text-7xl text-amber-300 drop-shadow-lg">
+                        Happy 25th Birthday Sheraz Somroo
+                    </p>
+                    <p class="font-dancing-script text-xl sm:text-2xl text-slate-200">
+                        8th August • Welcome to your greatest year yet! 🎉
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER (Layer 10 - Front of floating emojis) -->
+    <main class="relative z-10 max-w-5xl mx-auto px-4 py-8 space-y-24">
+
+        <!-- HERO BANNER SECTION -->
+        <section class="relative rounded-3xl border border-amber-500/20 bg-slate-900/75 backdrop-blur-xl p-8 sm:p-14 text-center shadow-2xl space-y-8">
+            
+            <div class="space-y-4">
+                <div class="inline-flex items-center space-x-2 bg-amber-400/10 border border-amber-400/30 text-amber-300 px-4 py-1 rounded-full text-xs tracking-widest font-outfit uppercase">
+                    <span>👑 25TH BIRTHDAY CELEBRATION 👑</span>
+                </div>
+
+                <div class="space-y-2">
+                    <p class="font-great-vibes text-4xl sm:text-6xl text-amber-300 drop-shadow-sm">
+                        Happy 25th Birthday
+                    </p>
+                    <h1 class="font-cinzel text-4xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-500 tracking-wider">
+                        SHERAZ SOMROO
+                    </h1>
+                </div>
+
+                <p class="font-dancing-script text-2xl sm:text-3xl text-slate-300 max-w-xl mx-auto">
+                    "8th August • Turning 25 with Unstoppable Style, Brotherhood & Victory!"
+                </p>
+            </div>
+
+            <!-- Spotlight Frame -->
+            <div class="relative max-w-md mx-auto rounded-2xl overflow-hidden border border-amber-400/30 shadow-2xl group">
+                <img src="images/hero.png" alt="Sheraz Somroo 25th Birthday" class="w-full h-72 sm:h-80 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-70"></div>
+                <div class="absolute bottom-4 left-0 right-0 text-center">
+                    <span class="font-outfit text-sm text-amber-300 bg-slate-950/80 px-4 py-1.5 rounded-xl border border-amber-500/30 backdrop-blur-md">
+                        ✨ 8th August 2026 • 25 Years Young
+                    </span>
+                </div>
+            </div>
+
+            <!-- COUNTDOWN TIMER -->
+            <div class="bg-slate-950/80 border border-amber-500/20 rounded-2xl p-5 max-w-md mx-auto shadow-inner">
+                <p class="font-outfit text-xs text-amber-400/90 uppercase tracking-widest mb-3">
+                    Countdown to August 8th
+                </p>
+                <div class="grid grid-cols-4 gap-3 font-space text-center" id="countdown">
+                    <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-2">
+                        <span id="days" class="text-2xl sm:text-3xl font-bold text-amber-300">00</span>
+                        <span class="block text-[10px] text-slate-400 font-outfit uppercase mt-0.5">Days</span>
+                    </div>
+                    <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-2">
+                        <span id="hours" class="text-2xl sm:text-3xl font-bold text-amber-300">00</span>
+                        <span class="block text-[10px] text-slate-400 font-outfit uppercase mt-0.5">Hours</span>
+                    </div>
+                    <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-2">
+                        <span id="minutes" class="text-2xl sm:text-3xl font-bold text-amber-300">00</span>
+                        <span class="block text-[10px] text-slate-400 font-outfit uppercase mt-0.5">Mins</span>
+                    </div>
+                    <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-2">
+                        <span id="seconds" class="text-2xl sm:text-3xl font-bold text-amber-300">00</span>
+                        <span class="block text-[10px] text-slate-400 font-outfit uppercase mt-0.5">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 3D GYROSCOPE PANORAMIC SENSOR WORLD (EXPANDED 10-FRAME SPHERE) -->
+        <section class="rounded-3xl border border-amber-500/30 bg-slate-900/85 backdrop-blur-2xl p-6 sm:p-12 text-center shadow-2xl overflow-hidden space-y-6">
+            <div class="space-y-2">
+                <span class="font-outfit text-amber-400 text-xs tracking-widest uppercase bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/30">
+                    🌌 3D SENSOR GYRO WORLD (10-FRAME UNIVERSE)
+                </span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-500 font-extrabold">
+                    360° Motion Sensor Universe
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300 font-outfit max-w-xl mx-auto">
+                    Tilt your mobile phone (or drag mouse) in any direction to pan the 3D camera across 10 floating memory frames positioned around you in 3D space!
+                </p>
+            </div>
+
+            <!-- 3D GYRO PANORAMIC STAGE -->
+            <div id="gyro-stage" class="relative py-8 min-h-[500px] sm:min-h-[580px] flex justify-center items-center cursor-grab select-none overflow-hidden">
+                <div id="gyro-world" class="relative w-full max-w-4xl h-[460px] flex justify-center items-center">
+                    
+                    <!-- Frame 1: Center Front (Z: 220px) -->
+                    <div class="gyro-card absolute w-60 sm:w-72 h-72 sm:h-80 bg-slate-950 border-2 border-amber-400/80 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.5)] p-2.5 z-30" style="transform: translate3d(0px, 0px, 220px);">
+                        <img src="images/hero.png" alt="Frame 1" class="w-full h-56 object-cover rounded-xl">
+                        <div class="pt-3">
+                            <h4 class="font-cinzel text-amber-300 text-sm font-bold">Sheraz Somroo</h4>
+                            <p class="font-dancing-script text-xs text-slate-300">"Center Stage • 25th Birthday"</p>
+                        </div>
+                    </div>
+
+                    <!-- Frame 2: Top Left (Y: -140px, X: -240px, Z: 80px) -->
+                    <div class="gyro-card absolute w-48 sm:w-56 h-56 sm:h-64 bg-slate-950/90 border border-amber-400/40 rounded-2xl overflow-hidden shadow-2xl p-2 z-20" style="transform: translate3d(-240px, -140px, 80px) rotateY(25deg) rotateX(15deg);">
+                        <img src="images/sheraz-portrait.png" alt="Frame 2" class="w-full h-40 object-cover rounded-xl">
+                        <p class="font-outfit text-xs text-amber-300 mt-2 font-semibold">Spotlight Portrait</p>
+                    </div>
+
+                    <!-- Frame 3: Top Right (Y: -140px, X: 240px, Z: 80px) -->
+                    <div class="gyro-card absolute w-48 sm:w-56 h-56 sm:h-64 bg-slate-950/90 border border-amber-400/40 rounded-2xl overflow-hidden shadow-2xl p-2 z-20" style="transform: translate3d(240px, -140px, 80px) rotateY(-25deg) rotateX(15deg);">
+                        <img src="images/photo-1.png" alt="Frame 3" class="w-full h-40 object-cover rounded-xl">
+                        <p class="font-outfit text-xs text-amber-300 mt-2 font-semibold">Golden Moments</p>
+                    </div>
+
+                    <!-- Frame 4: Bottom Left (Y: 140px, X: -240px, Z: 80px) -->
+                    <div class="gyro-card absolute w-48 sm:w-56 h-56 sm:h-64 bg-slate-950/90 border border-amber-400/40 rounded-2xl overflow-hidden shadow-2xl p-2 z-20" style="transform: translate3d(-240px, 140px, 80px) rotateY(25deg) rotateX(-15deg);">
+                        <img src="images/photo-2.png" alt="Frame 4" class="w-full h-40 object-cover rounded-xl">
+                        <p class="font-outfit text-xs text-amber-300 mt-2 font-semibold">Victories & Goals</p>
+                    </div>
+
+                    <!-- Frame 5: Bottom Right (Y: 140px, X: 240px, Z: 80px) -->
+                    <div class="gyro-card absolute w-48 sm:w-56 h-56 sm:h-64 bg-slate-950/90 border border-amber-400/40 rounded-2xl overflow-hidden shadow-2xl p-2 z-20" style="transform: translate3d(240px, 140px, 80px) rotateY(-25deg) rotateX(-15deg);">
+                        <img src="images/cake.png" alt="Frame 5" class="w-full h-40 object-cover rounded-xl">
+                        <p class="font-outfit text-xs text-amber-300 mt-2 font-semibold">25th Cake Celebration</p>
+                    </div>
+
+                    <!-- Frame 6: Far Left Ring (X: -420px, Z: -40px) -->
+                    <div class="gyro-card absolute w-44 sm:w-52 h-52 sm:h-60 bg-slate-950/80 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl p-2 z-10 opacity-80" style="transform: translate3d(-420px, 0px, -40px) rotateY(40deg);">
+                        <img src="images/photo-3.png" alt="Frame 6" class="w-full h-36 object-cover rounded-xl">
+                        <p class="font-outfit text-[11px] text-amber-300 mt-1">Trophies & Stars</p>
+                    </div>
+
+                    <!-- Frame 7: Far Right Ring (X: 420px, Z: -40px) -->
+                    <div class="gyro-card absolute w-44 sm:w-52 h-52 sm:h-60 bg-slate-950/80 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl p-2 z-10 opacity-80" style="transform: translate3d(420px, 0px, -40px) rotateY(-40deg);">
+                        <img src="images/photo-4.png" alt="Frame 7" class="w-full h-36 object-cover rounded-xl">
+                        <p class="font-outfit text-[11px] text-amber-300 mt-1">Silver Badge</p>
+                    </div>
+
+                    <!-- Frame 8: Sky High Top (Y: -280px, Z: -80px) -->
+                    <div class="gyro-card absolute w-44 sm:w-52 h-52 sm:h-60 bg-slate-950/80 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl p-2 z-10 opacity-80" style="transform: translate3d(0px, -280px, -80px) rotateX(35deg);">
+                        <img src="images/hero.png" alt="Frame 8" class="w-full h-36 object-cover rounded-xl">
+                        <p class="font-outfit text-[11px] text-amber-300 mt-1">Sky High Vibe</p>
+                    </div>
+
+                    <!-- Frame 9: Deep Ground Bottom (Y: 280px, Z: -80px) -->
+                    <div class="gyro-card absolute w-44 sm:w-52 h-52 sm:h-60 bg-slate-950/80 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl p-2 z-10 opacity-80" style="transform: translate3d(0px, 280px, -80px) rotateX(-35deg);">
+                        <img src="images/sheraz-portrait.png" alt="Frame 9" class="w-full h-36 object-cover rounded-xl">
+                        <p class="font-outfit text-[11px] text-amber-300 mt-1">Solid Foundation</p>
+                    </div>
+
+                    <!-- Frame 10: Deep Center Back (Z: -180px) -->
+                    <div class="gyro-card absolute w-40 sm:w-48 h-48 sm:h-56 bg-slate-950/70 border border-amber-500/20 rounded-2xl overflow-hidden shadow-lg p-2 z-0 opacity-60" style="transform: translate3d(0px, 0px, -180px) rotateY(180deg);">
+                        <img src="images/photo-1.png" alt="Frame 10" class="w-full h-32 object-cover rounded-xl">
+                        <p class="font-outfit text-[10px] text-amber-300 mt-1">Background Orbit</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="inline-flex items-center space-x-2 bg-amber-400/10 text-amber-300 px-5 py-2 rounded-full border border-amber-400/30 text-xs font-outfit">
+                <i class="fa-solid fa-mobile-screen-button text-sm animate-bounce text-amber-400"></i>
+                <span>Tilt mobile phone or drag mouse to pan 360° across 10 3D frames!</span>
+            </div>
+        </section>
+
+        <!-- 8 LUXURY 3D INTERACTIVE FLIP CARDS SHOWCASE -->
+        <section class="space-y-8">
+            <div class="text-center space-y-2">
+                <span class="font-outfit text-amber-400 text-xs tracking-widest uppercase bg-amber-400/10 px-3.5 py-1 rounded-full border border-amber-400/20">
+                    ✨ 8 Luxury 3D Flip Cards
+                </span>
+                <h2 class="font-cinzel text-2xl sm:text-4xl text-amber-200 font-bold">
+                    3D Interactive Memory Cards Collection
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300 font-outfit">
+                    Tap or hover any card to flip it in 3D and reveal special birthday highlights!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/hero.png" alt="Card 1" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">25th Milestone</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">👑✨</span>
+                            <h4 class="font-cinzel font-bold text-lg">Quarter Century</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Celebrating 25 years of brilliance, unstoppable determination, and pure excellence!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/sheraz-portrait.png" alt="Card 2" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Vibe Master</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">🔥⚡</span>
+                            <h4 class="font-cinzel font-bold text-lg">Unstoppable Vibe</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Bringing high energy, positive vibes, and genuine laughter wherever he goes!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/photo-1.png" alt="Card 3" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Brotherhood</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">❤️🤝</span>
+                            <h4 class="font-cinzel font-bold text-lg">True Friend</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "A loyal brother standing firm through thick and thin with unconditional warmth!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/photo-2.png" alt="Card 4" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Future Goals</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">🚀🏆</span>
+                            <h4 class="font-cinzel font-bold text-lg">Age 25 & Beyond</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Age 25 is just the launchpad for grander achievements and victories!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/photo-3.png" alt="Card 5" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Leadership</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">🎯⭐</span>
+                            <h4 class="font-cinzel font-bold text-lg">Visionary Mind</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Always focusing on the big picture, turning vision into reality!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/photo-4.png" alt="Card 6" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Silver Jubilee</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">💎🎉</span>
+                            <h4 class="font-cinzel font-bold text-lg">8th August Honor</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "A special milestone date to celebrate a special person!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/cake.png" alt="Card 7" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">25th Cake</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">🎂🕯️</span>
+                            <h4 class="font-cinzel font-bold text-lg">25 Candles Lit</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Make a wish, blow out candles, and unlock endless joy!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="luxury-flip-card group" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner relative w-full h-72 rounded-2xl">
+                        <div class="flip-front absolute inset-0 bg-slate-950 border-2 border-amber-400/40 rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
+                            <img src="images/hero.png" alt="Card 8" class="w-full h-44 object-cover rounded-xl">
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="font-cinzel text-amber-300 font-bold text-sm">Legend Status</span>
+                                <span class="text-xs text-amber-400 font-outfit">Tap 🔄</span>
+                            </div>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-700 text-slate-950 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-3 shadow-2xl">
+                            <span class="text-3xl">👑🌟</span>
+                            <h4 class="font-cinzel font-bold text-lg">Unstoppable Legend</h4>
+                            <p class="font-outfit text-xs font-semibold leading-relaxed">
+                                "Here's to Sheraz Somroo — May your 25th year be your absolute best!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DUAL DUAL-DIRECTION INFINITY PHOTO REELS -->
+        <section class="rounded-3xl border border-amber-500/20 bg-slate-900/75 backdrop-blur-xl p-6 sm:p-8 space-y-6 shadow-2xl overflow-hidden">
+            <div class="text-center space-y-1">
+                <h3 class="font-cinzel text-2xl font-bold text-amber-200">
+                    Dual Continuous Film Reels
+                </h3>
+            </div>
+
+            <!-- Reel 1 (Left to Right) -->
+            <div class="infinity-track-wrapper overflow-hidden relative">
+                <div class="infinity-track flex gap-4 w-max animate-infinityScroll hover:[animation-play-state:paused]">
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/hero.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/sheraz-portrait.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-1.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-2.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-3.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/hero.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/sheraz-portrait.png" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 (Right to Left Reverse) -->
+            <div class="infinity-track-wrapper overflow-hidden relative">
+                <div class="infinity-track flex gap-4 w-max animate-infinityScrollReverse hover:[animation-play-state:paused]">
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-4.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/cake.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/hero.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-1.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-2.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/photo-4.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-32 rounded-xl overflow-hidden border border-amber-400/30 flex-shrink-0">
+                        <img src="images/cake.png" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FULL-COVER PORTRAIT CARD WITH 25 POPPING BALLOONS & WISHES FEED -->
+        <section id="cake-station" class="rounded-3xl border-2 border-amber-400/40 bg-slate-900/85 backdrop-blur-2xl p-6 sm:p-10 text-center shadow-2xl space-y-6 relative overflow-hidden">
+            <div class="max-w-2xl mx-auto space-y-3">
+                <span class="font-outfit text-amber-400 text-xs tracking-widest uppercase bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/30">
+                    🎈 25 POPPING BALLOONS & WISHES STATION
+                </span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl text-amber-200 font-bold">
+                    Pop Sheraz's 25 Birthday Balloons!
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300 font-outfit">
+                    Tap any balloon on Sheraz's portrait to pop it, unleash fireworks, and unlock 25 special birthday trophies & wishes!
+                </p>
+            </div>
+
+            <!-- FULL COVER PORTRAIT CARD WITH OVERLAY BALLOONS -->
+            <div class="relative max-w-xl mx-auto rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-[0_0_50px_rgba(245,158,11,0.4)] group min-h-[380px] sm:min-h-[460px] flex items-center justify-center bg-slate-950">
+                <!-- Background Image: sheraz-portrait.png -->
+                <img src="images/sheraz-portrait.png" alt="Sheraz Somroo Portrait" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.75]">
+                
+                <!-- Dark Gradient Glass Layer -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+
+                <!-- 25 BALLOONS GRID CONTAINER -->
+                <div id="candles-container" class="relative z-20 w-full h-full p-4 sm:p-6 grid grid-cols-5 gap-3 sm:gap-4 items-center justify-items-center">
+                    <!-- 25 Balloons generated dynamically by script.js -->
+                </div>
+
+                <!-- Status Badge -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 bg-slate-950/90 text-amber-300 font-outfit font-bold text-xs px-5 py-2 rounded-full shadow-2xl border border-amber-400/40 backdrop-blur-md">
+                    <span id="candles-status">25 Celebration Balloons Lit 🎈</span>
+                </div>
+            </div>
+
+            <!-- Blowout & Pop Control Buttons -->
+            <div class="flex justify-center gap-3 pt-2">
+                <button id="btn-blow-candles" class="px-6 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 font-outfit font-bold text-xs uppercase tracking-wider rounded-full hover:scale-105 active:scale-95 transition-all shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-burst mr-1.5"></i> Pop All 25 Balloons!
+                </button>
+                <button id="btn-relight-candles" class="px-5 py-2.5 bg-slate-800 border border-slate-700 text-slate-300 font-outfit font-semibold text-xs uppercase tracking-wider rounded-full hover:bg-slate-700 active:scale-95 transition-all">
+                    <i class="fa-solid fa-rotate mr-1.5"></i> Reset Balloons
+                </button>
+            </div>
+
+            <!-- DYNAMIC UNLOCKED BIRTHDAY WISHES & TROPHIES FEED -->
+            <div class="space-y-3 pt-6 max-w-2xl mx-auto text-left">
+                <h4 class="font-cinzel text-amber-300 text-sm font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-trophy text-amber-400"></i>
+                    <span>Unlocked Birthday Trophies & Wishes Feed</span>
+                </h4>
+                <div id="unlocked-wishes-feed" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
+                    <!-- Unlocked wish cards appended dynamically by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-6 border-t border-slate-800/80 text-slate-400 text-xs font-outfit space-y-1">
+            <p>Designed for Sheraz Somroo's 25th Birthday (8th August).</p>
+        </footer>
+
+    </main>
+
+    <!-- FLOATING CONFETTI BUTTON -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="triggerConfettiCannon()" class="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 rounded-full flex items-center justify-center text-xl shadow-2xl hover:scale-110 active:scale-90 transition-transform duration-200 border border-amber-200/40" title="Confetti Burst!">
+            🎉
+        </button>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
